@@ -8,15 +8,17 @@ function drawClockBackground(ctx,x,y,weigh,height)
 	
 	ctx.lineWidth = 7;
 	ctx.translate(dx,dy);
+
 	
-	ctx.fillStyle = "black";
-	ctx.beginPath();
-	ctx.arc(0, 0,3, 0, 2 * Math.PI, false);
-	ctx.fill();
+
 	//画外圆
-	ctx.beginPath();
 	var radious = ((weigh>height?weigh:height)-ctx.lineWidth)/2;
-	
+	var grd = ctx.createLinearGradient(-radious,0,radious,0);
+
+	grd.addColorStop(0,"red");
+	grd.addColorStop(1,"green");
+	ctx.strokeStyle = grd;
+	ctx.beginPath();
 	ctx.arc(0, 0,radious, 0, 2 * Math.PI, false);
 	ctx.stroke();
 	
@@ -72,12 +74,28 @@ function drawClockBackground(ctx,x,y,weigh,height)
 	ctx.restore();
 	return numberRad - 20/2;
 }
-function TimeRect(color,width,height)
+function TimeRect(color,width,len)
 {
 	this.angle = null;
 	this.color = color;
 	this.width = width;
-	this.height = height;
+	this.len = len;
+	this.draw = function(ctx)
+				{
+					ctx.save();     //保存当前的状态
+					ctx.beginPath();
+					ctx.lineWidth = this.width;
+					
+					ctx.rotate(this.angle/180.0*Math.PI);
+					ctx.moveTo(-10,0);		
+					ctx.lineTo(this.len,0);
+					ctx.lineCap="round";
+					ctx.strokeStyle = this.color;
+					ctx.stroke();                
+					ctx.restore();
+
+				}
+	/*
 	this.draw = function(ctx)
 				{
 					ctx.save();
@@ -87,6 +105,7 @@ function TimeRect(color,width,height)
 					ctx.fillRect(0,0,this.width,this.height);
 					ctx.restore();					
 				}
+				*/
 }
 function drawTime(ctx,x,y,weigh,height,rad)
 {
@@ -100,16 +119,16 @@ function drawTime(ctx,x,y,weigh,height,rad)
 	ctx.translate(dx,dy);
 	ctx.rotate(Math.PI);//顺时针旋转90，让刻度12保持在0度角
 	//时针
-	var HourRect = new TimeRect("black",1,80);
+	var HourRect = new TimeRect("black",3,80);
 	HourRect.angle = hour*30+min*0.5;
 	HourRect.draw(ctx);
 	//分针
 	
-	var minRect = new TimeRect("green",1,140);
+	var minRect = new TimeRect("green",3,140);
 	minRect.angle = min*6+sec/10.0;
 	minRect.draw(ctx);
 	//秒针
-	var secRect = new TimeRect("red",1,180);
+	var secRect = new TimeRect("red",3,180);
 	secRect.angle = sec*6;
 	secRect.draw(ctx);
 	ctx.translate(x,y);//恢复原坐标原点
@@ -122,6 +141,11 @@ function drawClock(canvas,x,y,weigh,height)
 	var context = canvas.getContext("2d");
 	var rad=drawClockBackground(context,x,y,weigh,height);
 	drawTime(context,x,y,weigh,height,rad);
+	//中心点
+	context.fillStyle = "white";
+	context.beginPath();
+	context.arc((x+weigh)/2, (y+height)/2,2, 0, 2 * Math.PI, false);
+	context.fill();
 	function goClock()
 	{
 		//draw
