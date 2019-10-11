@@ -1,0 +1,67 @@
+字体属性:
+	font-family:font1,font2...
+	font-size:
+	font-style:normal italic oblique
+	font-weight:normal bold bolder lighter number
+	font-variant:normal small-caps(//小写字母转大写)	font:
+颜色和背景属性：
+	color:
+	background-color:
+	background-image:url(path)
+	background-repeat:no-repeat repeat repeat-x repeat-y
+	background-attachment:scroll fixed //背景图像滚动还是固定
+	background-position:px px
+	background:
+段落属性：
+	word-spacing:px
+	letter-spacing:px
+	text-decoration:none underline overline line-through blink
+	vertical-align:baseline sub super top text-top middle text-bottom
+	text-transform:none capitalize(//首字母大写) uppercase lowercase
+	text-align:left right center justify
+	text-indent:px
+	line-height:px %
+	white-space:normal nowrap(//强制一行显示)
+外边距与内边距属性:
+	margin:px %
+	margin-top(..)
+	padding:px %
+	padding-top(..):
+边框属性：
+//上右下左
+	border-style:none dotted dashed solid double groove ridge inset outset
+	border-width:px
+	border-color:
+	border-top(..):
+定位属性：
+	position:static absolute fixed relative
+	top(..):auto px %
+	z-index:
+	float:none left right //文字浮动在元素周围
+	clear:none left right both
+	clip:auto rect ->clip:rect(auto,6cm,64px,auto)
+	width:
+	height:px
+	overflow:visible auto hidden scroll //超出部分的显示方式
+	visibility:inherit visible hidden
+列表属性:
+	list-style-type:none disc circle square decimal lower-roman upper-roman lower-alpha upper-alpha
+	list-style-image:none url(path)
+	list-style-position:outside inside
+	list-style:(@1 @2 @3)
+光标属性:
+	cursor:auto url(path)
+滤镜属性:
+	filter:alpha(key1=value1,key2=value2)->key:opacity(0-100) finishopacity style(0,1,2,3//渐变方式) startx starty finishx finishy
+	filter:blur(add=true/false,direction=,strenth=)
+	filter:chroma(color=value)//颜色转为透明色
+	filter:dropShadow(color,offx,offy,poitive=true/false)
+	filter:FlipH FlipV
+	filter:Glow(color,strenth=(1..255))//发光效果
+	filter:gray //灰度处理
+	filter:invert //反相
+	filter:xray //X光特效
+	filter:Mask(color)//遮罩
+	filter:wave(add,freq,lightstrength,phase,strength
+	)
+	
