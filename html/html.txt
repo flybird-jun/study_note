@@ -1,0 +1,46 @@
+表单
+	<form></form>
+	属性:
+		 action="" 
+		 name=""
+		 method="get || post"
+		 enctype="multipart/form-data" //MIME编码，上传需设置这个值
+				 "application/x-www-form-urlencode" //默认
+		 target = "_blank||_parent||_self||_top"
+	表单对象:<input>
+		文本:
+			name = "名字"
+			type = "text" //控件类型
+			value = "" //文本的值
+			size = "" //控件的长度
+			maxlength=""//最长字符数
+		密码:name value size maxlength
+			type = "password"
+		单选按钮radio:
+		<input name="" type = "radio" value="" checked="checked"/>
+		复选框checkbox:
+		<input name="" type = "checkbox" value="" checked="checked"/>
+		普通按钮button:
+		<input name="" type = "button" value="" onclick=""/>
+		提交按钮:
+		<input type = "submit" name = "" value = ""/>
+		重置按钮reset:
+		<input type = "reset" name = "" value = "" />
+		图像域image:
+		<input name ="" type = "image" src=""/>
+		隐藏域hidden
+		<input name = "" type = "hidden" value=""/>
+		文件域file
+		<input name="" type = "file" size="" maxlength=""/>
+下拉菜单:
+	<select name="">
+	<option value="content" select="selected">content</option>
+	</select>
+列表项:
+	<select name="" size="" multiple>
+	<option ...>...
+	</select>
+文本域标记textarea
+	<textarea name="" cols="" rows=""></textarea>
+
+		

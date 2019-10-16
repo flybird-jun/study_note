@@ -64,4 +64,9 @@
 	filter:Mask(color)//遮罩
 	filter:wave(add,freq,lightstrength,phase,strength
 	)
-	
+display 属性规定元素应该生成的框的类型。
+	table-cell:此元素会作为一个表格单元格显示
+	block:此元素将显示为块级元素，此元素前后会带有换行符。
+	none:不显示
+	inline:默认。此元素会被显示为内联元素，元素前后没有换行符。
+	inline-block:行内块元素。（CSS2.1 新增的值）

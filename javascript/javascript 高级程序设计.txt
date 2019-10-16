@@ -189,3 +189,11 @@ Canvas:
 				context.globalCompositeOperation = "destination-over";//上下图像合成方式
 			}
 		}
+		
+		
+jQuery:
+		$(document).ready(function())//不替换;<->window.onload
+		DOM 对象<-> JQUERY对象:
+		var $cr = $(..);
+		var cr = $_.get(0)||$_[0]
+		
