@@ -1,0 +1,58 @@
+javascript dom
+
+document.getElementById();
+object.getElementsByTagName();
+object.getElementsByClassName();
+object.addEventListener//不会覆盖 都会执行（同一个事件，执行多次）
+
+event:
+onmouseover,onmouseout,onclick,onkeypress
+
+
+childNodes nodeType nodeValue firstChild lastChild
+
+window.open ,js伪协议<a href="javascript:popUp(this.href);return false;">
+
+document.createElement()、object.appendChild()、document.createTextNode()、object.insertBefore()
+object.nextSibling()
+
+accesskey属性
+
+
+写一个通用addLoadEvent insertAfter 函数
+
+
+js 对象
+Object.create()//深度构造
+构造函数.prototype 原型
+检查对象属性的三种方法：
+in运算符 if("x" in ob)
+hasOwnProperty() //只检测自有属性
+propertyIsEnumerable()//自有属性且是可枚举
+
+getter和setter属性
+
+属性的特性：值、可写性、可枚举性、可配置性、（读取和写入）
+
+object.getOwnPropertyDescriptor();获取对象的某个属性特性
+返回对象{value:..,writable:boolean,enumerable:boolean,configureable:boolean}
+object.defineProperty(),设置属性特性
+object.defineProperties()设置多个属性特性
+object.isPrototypeof(ob) object是不是ob的原型
+Object.esExtensible() 判断对象是否是可扩展的
+Object.preventExtensions()//使对象不可扩展
+Object.seal()对象冻结（不可扩展+不可配置）
+Object.isSealed()
+
+str = JSON.stringify(ob) 对象->JSON字符串
+ob = JSON.parse(str) JSON字符串->对象
+
+arr.join() 数组值连接成字符串
+arr.sort()/a.sort(function(b,c))
+arr.concat()
+arr.slice()
+arr.splice()
+arr.forEach(function(val))
+
+
+instanceOf
