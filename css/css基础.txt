@@ -3,7 +3,8 @@
 	font-size:
 	font-style:normal italic oblique
 	font-weight:normal bold bolder lighter number
-	font-variant:normal small-caps(//小写字母转大写)	font:
+	font-variant:normal small-caps(//小写字母转大写)	
+	font:
 颜色和背景属性：
 	color:
 	background-color:
@@ -70,3 +71,37 @@ display 属性规定元素应该生成的框的类型。
 	none:不显示
 	inline:默认。此元素会被显示为内联元素，元素前后没有换行符。
 	inline-block:行内块元素。（CSS2.1 新增的值）
+css 选择器:
+	css多类选择器:
+		<p class="important warning">
+			This paragraph is a very important warning.
+		</p>
+		.important {font-weight:bold;}
+		.warning {font-style:italic;}
+		.important.warning {background:silver;}
+	简单属性选择器:
+		基本 *[attribute1][att..] {color:red;}
+		属性匹配 *[attribute="www."]{}
+		部分值属性选择器 *[class~="important"]->包含important的class属性
+		子串匹配属性选择器 [href^="www"] 以www开头的href属性
+						   [href$="com"] 以com结尾的href属性
+						   [href*="baidu"] 包含子串baidu的href属性
+	后代选择器:
+		div>p 子元素
+		h1+p 相邻兄弟选择器->p紧接在h1的后面
+css伪类:
+	锚伪类:
+		a.red:link {color: #FF0000}		/* 未访问的链接 */
+		a:visited {color: #00FF00}	/* 已访问的链接 */
+		a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
+		a:active {color: #0000FF}	/* 选定的链接 */
+	first-child伪类
+		p:first-child ->作为父元素(其它标签)的第一个子元素p，其它p不算
+		p:first-line p的第一行 伪元素只能用于块级元素。
+	:first-letter
+	:before :after伪元素 
+	h1:before
+	  {
+		content:url(logo.gif);
+	  }
+	h1标签之前加入图片

@@ -38,10 +38,11 @@ connect
 	固定报头:{10 ??}?? 10 79  共121个字符
 	可变报头:{00 04 4D 51 54 54 04 C2 01 2C}
 	负载：
-	clientId:goodgoodstudy mqttClientId:goodgoodstudy|securemode=3,signmethod=hmacsha1|
+	clientId:goodgoodstudy 
+	mqttClientId:goodgoodstudy|securemode=3,signmethod=hmacsha1|
 	mqttUsername:switch&a16TSeAknef
 	mqttPassword:clientIdgoodgoodstudydeviceNameswitchproductKeya16TSeAknef
-	hmacsha1加密后:cd57c5941483aab4b15ae2befeddec7884d55f3f
+		hmacsha1加密后:cd57c5941483aab4b15ae2befeddec7884d55f3f
 	
 	十六进制:
 	mqttClientId:67 6F 6F 64 67 6F 6F 64 73 74 75 64 79 7C 73 65 63 75 72 65 6D 6F 64 65 3D 33 2C 73 69 67 6E 6D 65 74 68 6F 64 3D 68 6D 61 63 73 68 61 31 7C 
