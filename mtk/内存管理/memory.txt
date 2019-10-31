@@ -1,0 +1,29 @@
+control buffer:
+	kal_user_mem.h
+	ctrl_buff_pool_size //内存大小
+	cfg_ctrl_buff //内存块个数
+	
+adm:
+	分为三层模型:
+	AP层(底层):申请的内存用list串起来
+	
+		applib_mem_ap_init()://初始化内存池，MTK代码在开机时调用，内存池大小在memoryRes.c中的g_applib_mem_ap_pool
+				kal_adm_create();
+				g_applib_mem_cntx:app_pool_id,app_pool,app_pool_size,app_pool_inited,app_stop_finish_callback
+		
+		applib_mem_ap_alloc/_int/():向内存池申请空间，将新申请的内存插入列表前面
+
+		applib_mem_ap_free/_int/()：释放空间,移除列表中的内存地址
+	asm层(中间层)://等学会group管理继续学习
+		mmi_frm_asm_alloc_int:
+		mmi_frm_asm_free_int:
+	
+	应用层:
+		在中间层上默认添加了一些参数，使得函数参数简单，便于调用
+		mmi_frm_asm_alloc_anonymous:default flag,cacheable memory 
+		mmi_frm_asm_alloc_anonymous_sw:software,cacheable memory 
+		mmi_frm_asm_alloc_anonymous_nc:framebuffer,no-cacheable memory
+med_alloc_ext_mem
+
+oom:out of memory
+ap:应用提供商
