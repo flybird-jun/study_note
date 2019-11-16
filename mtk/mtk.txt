@@ -1,17 +1,17 @@
-1.摄像头工作原理->YUV422
-2.自己写控件
-3.文件系统 
-5.task //pass
-6.fota vsim
-7.图层
-8.图形解码
-9.音视频解码
-10.group管理
-11.消息机制 //pass
-12.内存管理 //pass
-13.cui
-14.历史机制
-15.Gsensor
-16.GPS
-17.功耗
-18.soc,mqtt
+task //pass
+消息机制 //pass
+内存管理 //pass
+group管理 //pass
+soc,mqtt
+历史机制
+图层
+控件
+cui
+文件系统 
+图形解码
+音视频解码
+功耗
+GPS
+Gsensor
+摄像头工作原理->YUV422
+fota vsim
