@@ -9,6 +9,9 @@
 Qt
 计算机操作系统
 linux操作系统
+数据库系统
+redis
 live555
+mysql
 ffmpeg
 BOX2D

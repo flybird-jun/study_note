@@ -2,12 +2,14 @@ task //pass
 消息机制 //pass
 内存管理 //pass
 group管理 //pass
-soc,mqtt
+soc,mqtt //pass
 历史机制
 图层
 控件
 cui
 文件系统 
+IME即时通讯软件
+浏览器
 图形解码
 音视频解码
 功耗
