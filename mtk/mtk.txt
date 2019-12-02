@@ -3,11 +3,10 @@ task //pass
 内存管理 //pass
 group管理 //pass
 soc,mqtt //pass
-历史机制
+历史机制 //pass
 图层
 控件
 cui
-文件系统 
 IME即时通讯软件
 浏览器
 图形解码
