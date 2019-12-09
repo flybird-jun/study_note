@@ -26,12 +26,12 @@ class director
 protected:
 	builder * br;
 public:
-	virtual builder*construct() = 0;
+	virtual void construct() = 0;
 };
 class PeopleDirector
 {
 public:
-	virtual builder *construct()
+	virtual void construct()
 	{
 		br->setArm();
 		br->setArm();

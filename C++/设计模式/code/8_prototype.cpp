@@ -1,7 +1,7 @@
 class prototype
 {
 public:
-	virtual protype *clone()=0;
+	virtual prototype *clone()=0;
 };
 class concretePrototype:public prototype
 {
