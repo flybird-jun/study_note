@@ -4,17 +4,23 @@
 	创建型模式
 	结构型模式 
 	行为型模式
+ffmpeg
 Qt
+live555
 计算机操作系统
 linux操作系统
+
 数据库系统
 redis
-live555
 mysql
-ffmpeg
+CDN
 BOX2D
 算法导论
 
-webrtc nginx rtmp sr
-CDN
-RTMP Http-Flv HLS dash流媒体协议
+
+
+RTSP+RTP IPTV
+RTMP
+RTMFP
+MMS
+HTTP 
