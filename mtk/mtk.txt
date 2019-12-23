@@ -6,9 +6,10 @@ soc,mqtt //pass
 历史机制 //pass
 图层
 控件
-cui
-IME即时通讯软件
+cui //pass
+IM即时通讯软件
 浏览器
+
 图形解码
 音视频解码
 功耗
