@@ -1,0 +1,8 @@
+//ffmpeg -f vcfwcap -i 1 -r 30 out.yuv
+ffmpeg -devices
+ffmpeg -f dshow true -i dummy
+ffmpeg -f dshow video="screen-capture-recorder" -r 30 out.mp4
+		audio="virtual-audio-capturer" 
+ffmpeg -f avfoundation -i :1 out.wav
+
+ffplay out.yuv -s 1280x720 -pix_fmt yuyv422

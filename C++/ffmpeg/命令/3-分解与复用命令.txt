@@ -1,0 +1,4 @@
+ffmpeg -i out.mp4 -vcodec copy -acodec copy out.flv
+
+ffmpeg -i out.mp4 -vcodec copy -an out2.mp4 ≥È»° ”∆µ
+ffmpeg -i out.mp4 -vcodec copy -vn out2.mp3 ≥È»°“Ù∆µ
